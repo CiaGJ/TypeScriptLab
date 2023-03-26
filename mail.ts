@@ -13,19 +13,24 @@ export class Mail {
         this.mail = mail;
     } 
 
-    getType(type: mailtype):mailtype{
+    getType():mailtype{
         return this.type;
     }
     
-    getMail(mail: string):string{
+    getMail():string{
         return this.mail;
     }
 
     setType(type:mailtype):void{
-        this.type;
+        this.type = type;
     }
 
     setMail(mail: string):void{
-        this.mail;
+        this.mail = mail;
     }
+}
+
+export function printMail(mail: Mail):void{
+    console.log("Tipo: " + mail.getType())
+    console.log("Correo electrónico: "+mail.getMail())
 }

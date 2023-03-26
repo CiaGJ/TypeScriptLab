@@ -1,13 +1,13 @@
 export class Address {
     street: string;
     num: number;
-    floor: number;
-    letter: string;
+    floor?: number;
+    letter?: string;
     zipcode: number;
     poblacion: string;
     provincia: string;
 
-    constructor(street: string, no: number, floor: number, letter: string, zipcode: number, poblacion: string, provincia: string){
+    constructor(street: string, no: number, zipcode: number, poblacion: string, provincia: string, floor?: number, letter?: string){
         this.street = street;
         this.num = no;
         this.floor = floor;
@@ -21,48 +21,53 @@ export class Address {
         return this.street;
     }
     setStreet(street:string):void{
-        this.street;
+        this.street = street;
     }
 
     getNum():number{
         return this.num;
     }
     setNum(num:number):void{
-        this.num;
+        this.num = num;
     }
 
-    getFloor():number{
+    getFloor():number|undefined{
         return this.floor;
     }
     setFloor(floor:number):void{
-        this.floor;
+        this.floor = floor;
     }
 
-    getLetter():string{
+    getLetter():string|undefined{
         return this.letter;
     }
     setLetter(letter:string):void{
-        this.letter;
+        this.letter = letter;
     }
 
     getZipcode():number{
         return this.zipcode;
     }
     setZipcode(zipcode:number):void{
-        this.zipcode;
+        this.zipcode = zipcode;
     }
 
     getPoblacion():string{
         return this.poblacion;
     }
     setPoblacion(poblacion:string):void{
-        this.poblacion;
+        this.poblacion = poblacion;
     }
 
     getProvincia():string{
         return this.provincia;
     }
     setProvincia(provincia:string):void{
-        this.provincia;
+        this.provincia = provincia;
     }
+}
+
+export function printAddress(address: Address):void{
+    console.log("Dirección: "+address.getStreet()+", "+address.getNum()+", "+(address.getFloor()?address.getFloor():"")+(address.getLetter()?address.getLetter():""))
+    console.log(address.getPoblacion()+", "+address.getZipcode()+", "+address.getProvincia())
 }

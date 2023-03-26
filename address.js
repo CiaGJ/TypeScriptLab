@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Address = void 0;
+exports.printAddress = exports.Address = void 0;
 class Address {
     street;
     num;
@@ -9,7 +9,7 @@ class Address {
     zipcode;
     poblacion;
     provincia;
-    constructor(street, no, floor, letter, zipcode, poblacion, provincia) {
+    constructor(street, no, zipcode, poblacion, provincia, floor, letter) {
         this.street = street;
         this.num = no;
         this.floor = floor;
@@ -62,3 +62,8 @@ class Address {
     }
 }
 exports.Address = Address;
+function printAddress(address) {
+    console.log("Dirección: " + address.getStreet() + ", " + address.getNum() + ", " + (address.getFloor() ? address.getFloor() : "") + (address.getLetter() ? address.getLetter() : ""));
+    console.log(address.getPoblacion() + ", " + address.getZipcode() + ", " + address.getProvincia());
+}
+exports.printAddress = printAddress;

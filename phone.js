@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Phone = exports.phonetype = void 0;
+exports.printPhone = exports.Phone = exports.phonetype = void 0;
 var phonetype;
 (function (phonetype) {
     phonetype["mobile"] = "Movil";
@@ -15,17 +15,22 @@ class Phone {
         this.type = type;
         this.phonenumber = phone;
     }
-    getType(type) {
+    getType() {
         return this.type;
-    }
-    getPhoneNumber(phonenumber) {
-        return this.phonenumber;
     }
     setType(type) {
         this.type;
+    }
+    getPhoneNumber() {
+        return this.phonenumber;
     }
     setPhoneNumber(phonenumber) {
         this.phonenumber;
     }
 }
 exports.Phone = Phone;
+function printPhone(phone) {
+    console.log("Tipo: " + phone.getType());
+    console.log("Teléfono: " + phone.getPhoneNumber());
+}
+exports.printPhone = printPhone;

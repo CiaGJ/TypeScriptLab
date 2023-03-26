@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Mail = exports.mailtype = void 0;
+exports.printMail = exports.Mail = exports.mailtype = void 0;
 var mailtype;
 (function (mailtype) {
     mailtype["work"] = "Trabajo";
@@ -14,10 +14,10 @@ class Mail {
         this.type = type;
         this.mail = mail;
     }
-    getType(type) {
+    getType() {
         return this.type;
     }
-    getMail(mail) {
+    getMail() {
         return this.mail;
     }
     setType(type) {
@@ -28,3 +28,8 @@ class Mail {
     }
 }
 exports.Mail = Mail;
+function printMail(mail) {
+    console.log("Tipo: " + mail.getType());
+    console.log("Correo electrónico: " + mail.getMail());
+}
+exports.printMail = printMail;

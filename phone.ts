@@ -14,19 +14,22 @@ export class Phone{
         this.phonenumber = phone;
     }
 
-    getType(type: phonetype):phonetype{
+    getType():phonetype{
         return this.type;
     }
+    setType(type:phonetype):void{
+        this.type = type;
+    }
     
-    getPhoneNumber(phonenumber: number):number{
+    getPhoneNumber():number{
         return this.phonenumber;
     }
-
-    setType(type:phonetype):void{
-        this.type;
-    }
-
     setPhoneNumber(phonenumber: number):void{
-        this.phonenumber;
+        this.phonenumber = phonenumber;
     }
+}
+
+export function printPhone(phone: Phone):void{
+    console.log("Tipo: " + phone.getType())
+    console.log("Teléfono: "+phone.getPhoneNumber())
 }
