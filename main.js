@@ -31,6 +31,6 @@ changePerson?.addAddress(new address_1.Address("Calle Nueva", 8, 34000, "Alicant
 changePerson?.addMail(new mail_1.Mail(mail_1.mailtype.personal, "personal.felipe@test.com"));
 changePerson?.addPhone(new phone_1.Phone(phone_1.phonetype.mobile, 666777888));
 // Show 3 people
-//showPerson(alicia);
+(0, person_1.showPerson)(alicia);
 (0, person_1.showPerson)(felipe);
-//showPerson(alex);
+(0, person_1.showPerson)(alex);

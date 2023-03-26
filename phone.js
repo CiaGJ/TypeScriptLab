@@ -19,13 +19,13 @@ class Phone {
         return this.type;
     }
     setType(type) {
-        this.type;
+        this.type = type;
     }
     getPhoneNumber() {
         return this.phonenumber;
     }
     setPhoneNumber(phonenumber) {
-        this.phonenumber;
+        this.phonenumber = phonenumber;
     }
 }
 exports.Phone = Phone;

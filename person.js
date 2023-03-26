@@ -75,7 +75,7 @@ class Person {
         return this.addresses;
     }
     setAddresses(addresses) {
-        this.addresses = addresses = addresses;
+        this.addresses = addresses;
     }
     addAddress(address) {
         this.addresses.push(address);
@@ -114,7 +114,7 @@ var genre;
     genre["O"] = "Other";
 })(genre = exports.genre || (exports.genre = {}));
 function showPerson(person) {
-    console.log("====================== Person Data ======================");
+    console.log("====================== Datos de la persona ======================");
     console.log("Nombre: " + person.getName());
     console.log("Apellidos: " + person.getSurname());
     console.log("Edad: " + person.getAge());
@@ -129,6 +129,6 @@ function showPerson(person) {
     console.log("Teléfonos: ");
     person.getPhones().map(phone_1.printPhone);
     console.log("Notas: " + (person.getNotes() != undefined ? person.getNotes() : ""));
-    console.log("=========================================================\n");
+    console.log("=================================================================\n");
 }
 exports.showPerson = showPerson;

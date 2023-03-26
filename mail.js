@@ -21,10 +21,10 @@ class Mail {
         return this.mail;
     }
     setType(type) {
-        this.type;
+        this.type = type;
     }
     setMail(mail) {
-        this.mail;
+        this.mail = mail;
     }
 }
 exports.Mail = Mail;
